@@ -12,6 +12,11 @@ setup = function(){
   drawExtraDirt(230,190);
   drawExtraDirt(110,110);
   drawExtraDirt(330,50);
+
+  drawMole(70,90);
+  drawMole(300,30);
+  drawMole(300,320);
+  drawMole(200,170);
 }
 
 //🟢drawExtraDirect Function - custom function created by Ms. Hall
@@ -23,19 +28,22 @@ var drawExtraDirt = function(dirtX, dirtY){
 };
 
 //🟢drawMole Function - custom function created for this lesson
-var drawMole = function() {
-    var moleX = 248;
-    var moleY = 185;
+var drawMole = function(moleX, moleY) {
+    
 
     noStroke();
     fill(125, 93, 43);
+    fill(random(25,20), random(74,2), random(14,85));
     ellipse(moleX, moleY, 60, 60); // face
     fill(255, 237, 209);
     ellipse(moleX, moleY+10, 33, 28); 
     fill(0, 0, 0);
+    fill(random(25,255), random(40,65), random(42,25));
     ellipse(moleX-10, moleY-15, 10, 10); // eyes
     ellipse(moleX+10, moleY-15, 10, 10);
     ellipse(moleX, moleY-5, 10, 10); // nose
     ellipse(moleX, moleY+10, 20, 5); // mouth
+
+    
 };
 
